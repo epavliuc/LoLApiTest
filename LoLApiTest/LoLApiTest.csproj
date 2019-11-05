@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="ApiConfig.cs" />
     <Compile Include="Data_Handling\LoLApiDTO.cs" />
+    <Compile Include="Data_Handling\LoLApiModel.cs" />
     <Compile Include="HTTP_Management\LoLApiCall.cs" />
     <Compile Include="program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
