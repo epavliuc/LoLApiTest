@@ -1,0 +1,10 @@
+D:\VisualStudio\LoLApiTest\LoLApiTest\bin\Debug\LoLApiTest.exe.config
+D:\VisualStudio\LoLApiTest\LoLApiTest\bin\Debug\LoLApiTest.exe
+D:\VisualStudio\LoLApiTest\LoLApiTest\bin\Debug\LoLApiTest.pdb
+D:\VisualStudio\LoLApiTest\LoLApiTest\bin\Debug\RestSharp.dll
+D:\VisualStudio\LoLApiTest\LoLApiTest\bin\Debug\RestSharp.xml
+D:\VisualStudio\LoLApiTest\LoLApiTest\obj\Debug\LoLApiTest.csprojAssemblyReference.cache
+D:\VisualStudio\LoLApiTest\LoLApiTest\obj\Debug\LoLApiTest.csproj.CoreCompileInputs.cache
+D:\VisualStudio\LoLApiTest\LoLApiTest\obj\Debug\LoLApiTest.csproj.CopyComplete
+D:\VisualStudio\LoLApiTest\LoLApiTest\obj\Debug\LoLApiTest.exe
+D:\VisualStudio\LoLApiTest\LoLApiTest\obj\Debug\LoLApiTest.pdb

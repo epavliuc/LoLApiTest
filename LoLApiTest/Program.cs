@@ -4,14 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LoLApiTest
+namespace LoLApiTest.HTTP_Management
 {
-    class Program
+    class program
     {
         static void Main(string[] args)
         {
+            LoLApiCall loLApiCall = new LoLApiCall();
 
+            Console.WriteLine(loLApiCall.LoLApiRequest());
+            Console.Read();
 
         }
+
+
     }
 }
