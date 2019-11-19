@@ -37,5 +37,22 @@ namespace LoLApiTest
             }
             return null;
         }
+
+        public LeagueItem HighestLeaguePoints()
+        {
+            LoLApiService lolApiService = new LoLApiService();
+            IList<LeagueItem> playerDetails = lolApiService.lolApiDTO.loLApiModel.entries;
+            LeagueItem player = new LeagueItem();
+            int second = 1;
+            for(int i=0;i< playerDetails.Count; i++)
+            {
+                if (playerDetails[i].leaguePoints > playerDetails[second].leaguePoints)
+                {
+                    player = playerDetails[i];
+                    second++;
+                }
+            }
+            return player;
+        }
     }
 }

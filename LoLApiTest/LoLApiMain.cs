@@ -15,10 +15,10 @@ namespace LoLApiTest
         static void Main(string[] args)
         {
             
-            //LoLApiCall loLApiCall = new LoLApiCall();
             LoLApiService lolApiService = new LoLApiService();
+            LoLApiSearch lolApiSearch = new LoLApiSearch();
             Console.WriteLine(lolApiService.lolApiDTO.loLApiModel.entries[1].summonerName);
-
+            Console.WriteLine(lolApiSearch.HighestLeaguePoints().summonerName);
 
             Console.Read();
 
