@@ -14,9 +14,12 @@ namespace LoLApiTest
     {
         static void Main(string[] args)
         {
-            LoLApiCall loLApiCall = new LoLApiCall();
+            
+            //LoLApiCall loLApiCall = new LoLApiCall();
+            LoLApiService lolApiService = new LoLApiService();
+            Console.WriteLine(lolApiService.lolApiDTO.loLApiModel.entries[1].summonerName);
 
-            Console.WriteLine(loLApiCall.LoLApiRequest());
+
             Console.Read();
 
         }

@@ -10,13 +10,13 @@ namespace LoLApiTest.Data_Handling
     {
         public string leagueId { get; set; }
         public string tier { get; set; }
-        public List<PlayerDetails> playerDetails { get; set; }
+        public IList<LeagueItem> entries { get; set; }
         public string queue { get; set; }
         public string name { get; set; }
     }
-    public class PlayerDetails
+    public class LeagueItem
     {
-        public string sumName { get; set; }
+        public string summonerName { get; set; }
         public bool hotStreak { get; set; }
         public MiniSeries miniSeries { get; set; }
         public int wins { get; set; }
