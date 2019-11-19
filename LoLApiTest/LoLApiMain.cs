@@ -10,7 +10,7 @@ using LoLApiTest.HTTP_Management;
 
 namespace LoLApiTest
 {
-    class LoLApiMain
+    public class LoLApiMain
     {
         static void Main(string[] args)
         {

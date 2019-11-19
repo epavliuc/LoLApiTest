@@ -61,9 +61,11 @@
     <Compile Include="ApiConfig.cs" />
     <Compile Include="Data_Handling\LoLApiDTO.cs" />
     <Compile Include="Data_Handling\LoLApiModel.cs" />
+    <Compile Include="Data_Handling\LoLApiSearch.cs" />
     <Compile Include="HTTP_Management\LoLApiCall.cs" />
     <Compile Include="LoLApiMain.cs" />
     <Compile Include="LoLApiTests\LoLApiContentTests.cs" />
+    <Compile Include="LoLApiTests\LoLApiEntriesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
