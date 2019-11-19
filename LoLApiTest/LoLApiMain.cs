@@ -14,7 +14,7 @@ namespace LoLApiTest
     {
         static void Main(string[] args)
         {
-            
+            //testing playground
             LoLApiService lolApiService = new LoLApiService();
             LoLApiSearch lolApiSearch = new LoLApiSearch();
             Console.WriteLine(lolApiService.lolApiDTO.loLApiModel.entries[1].summonerName);

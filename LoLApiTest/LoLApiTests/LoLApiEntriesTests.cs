@@ -27,5 +27,11 @@ namespace LoLApiTest.LoLApiTests
             Assert.AreEqual("xoJxTUa16rU1NFVP3PoXtYtLYWRkRRL-g9S6PYtRG2y-uCg", lolApiSearch.ByID("xoJxTUa16rU1NFVP3PoXtYtLYWRkRRL-g9S6PYtRG2y-uCg").summonerId);
         }
 
+        [Test]
+        public void ApiBestPlayerCheck()
+        {
+            Assert.AreEqual("TheUnshackIedone", lolApiSearch.HighestLeaguePoints().summonerName);
+        }
+
     }
 }

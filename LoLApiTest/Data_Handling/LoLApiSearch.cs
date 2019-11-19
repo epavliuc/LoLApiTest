@@ -43,13 +43,14 @@ namespace LoLApiTest
             LoLApiService lolApiService = new LoLApiService();
             IList<LeagueItem> playerDetails = lolApiService.lolApiDTO.loLApiModel.entries;
             LeagueItem player = new LeagueItem();
-            int second = 1;
-            for(int i=0;i< playerDetails.Count; i++)
+
+            int leaguepoints = 0;
+            foreach(LeagueItem li in playerDetails)
             {
-                if (playerDetails[i].leaguePoints > playerDetails[second].leaguePoints)
+                if (li.leaguePoints > leaguepoints)
                 {
-                    player = playerDetails[i];
-                    second++;
+                    leaguepoints = li.leaguePoints;
+                    player = li;
                 }
             }
             return player;
