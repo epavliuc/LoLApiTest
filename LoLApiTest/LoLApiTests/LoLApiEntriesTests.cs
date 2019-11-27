@@ -13,24 +13,23 @@ namespace LoLApiTest.LoLApiTests
     [TestFixture]
     class LoLApiEntriesTests
     {
-        LoLApiSearch lolApiSearch = new LoLApiSearch();
 
         [Test]
         public void ApiPlayerNameCheck()
         {
-            Assert.AreEqual("Valcious", lolApiSearch.ByName("Valcious").summonerName);
+            Assert.AreEqual("Valcious", LoLApiSearch.ByName("Valcious").summonerName);
         }
 
         [Test]
         public void ApiPlayerIDCheck()
         {
-            Assert.AreEqual("xoJxTUa16rU1NFVP3PoXtYtLYWRkRRL-g9S6PYtRG2y-uCg", lolApiSearch.ByID("xoJxTUa16rU1NFVP3PoXtYtLYWRkRRL-g9S6PYtRG2y-uCg").summonerId);
+            Assert.AreEqual("xoJxTUa16rU1NFVP3PoXtYtLYWRkRRL-g9S6PYtRG2y-uCg", LoLApiSearch.ByID("xoJxTUa16rU1NFVP3PoXtYtLYWRkRRL-g9S6PYtRG2y-uCg").summonerId);
         }
 
         [Test]
         public void ApiBestPlayerCheck()
         {
-            Assert.AreEqual("TheUnshackIedone", lolApiSearch.HighestLeaguePoints().summonerName);
+            Assert.AreEqual("TheUnshackIedone", LoLApiSearch.HighestLeaguePoints().summonerName);
         }
 
     }

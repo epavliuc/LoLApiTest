@@ -31,7 +31,7 @@ namespace LoLApiTest
                 Console.WriteLine(noSuchName.Message);
                 //throw noSuchName;
             }
-            Console.WriteLine(sortedList[299].leaguePoints + sortedList[299].summonerName);
+            Console.WriteLine($"{sortedList[0].summonerName} is the best {sortedList[0].leaguePoints} ");
 
 
             

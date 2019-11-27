@@ -11,6 +11,7 @@ namespace LoLApiTest
     public static class LoLApiSearch
     {  
 
+        //search player from entries by name
         public static LeagueItem ByName(string summName)
         {
             LoLApiService lolApiService = new LoLApiService();
@@ -25,6 +26,7 @@ namespace LoLApiTest
             return null;
         }
 
+        //search player from entries by id
         public static LeagueItem ByID(string summID)
         {
             LoLApiService lolApiService = new LoLApiService();
@@ -39,6 +41,7 @@ namespace LoLApiTest
             return null;
         }
 
+        //search for player with highest league points
         public static LeagueItem HighestLeaguePoints()
         {
             LoLApiService lolApiService = new LoLApiService();
@@ -57,9 +60,10 @@ namespace LoLApiTest
             return player;
         }
 
+        //return entries sorted by league points
         public static IList<LeagueItem> SortedList(IList<LeagueItem> leagueItems)
         {
-            return leagueItems.OrderBy(o => o.leaguePoints).ToList();
+            return leagueItems.OrderByDescending(o => o.leaguePoints).ToList();
         }
     }
 }
