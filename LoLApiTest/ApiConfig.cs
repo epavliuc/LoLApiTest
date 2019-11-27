@@ -10,6 +10,6 @@ namespace LoLApiTest
     class ApiConfig
     {
         public static string ApiUrl = ConfigurationManager.AppSettings["BaseApiUrl"];
-        public static string ApiKey = ConfigurationManager.AppSettings["ApiKey"];
+        public static string ApiKey = System.IO.File.ReadAllText(ConfigurationManager.AppSettings["ApiKey"]);
     }
 }
