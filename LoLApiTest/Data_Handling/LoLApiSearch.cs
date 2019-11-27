@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using static LoLApiTest.LoLApiMain;
 
 namespace LoLApiTest
 {
-    public class LoLApiSearch : LoLApiMain
+    public static class LoLApiSearch
     {  
-        public LeagueItem ByName(string summName)
+
+        public static LeagueItem ByName(string summName)
         {
             LoLApiService lolApiService = new LoLApiService();
             IList<LeagueItem> playerDetails = lolApiService.lolApiDTO.loLApiModel.entries;
@@ -24,7 +25,7 @@ namespace LoLApiTest
             return null;
         }
 
-        public LeagueItem ByID(string summID)
+        public static LeagueItem ByID(string summID)
         {
             LoLApiService lolApiService = new LoLApiService();
             IList<LeagueItem> playerDetails = lolApiService.lolApiDTO.loLApiModel.entries;
@@ -38,7 +39,7 @@ namespace LoLApiTest
             return null;
         }
 
-        public LeagueItem HighestLeaguePoints()
+        public static LeagueItem HighestLeaguePoints()
         {
             LoLApiService lolApiService = new LoLApiService();
             IList<LeagueItem> playerDetails = lolApiService.lolApiDTO.loLApiModel.entries;
@@ -54,6 +55,11 @@ namespace LoLApiTest
                 }
             }
             return player;
+        }
+
+        public static IList<LeagueItem> SortedList(IList<LeagueItem> leagueItems)
+        {
+            return leagueItems.OrderBy(o => o.leaguePoints).ToList();
         }
     }
 }

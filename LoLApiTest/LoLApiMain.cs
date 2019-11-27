@@ -15,10 +15,26 @@ namespace LoLApiTest
         static void Main(string[] args)
         {
             //testing playground
-            LoLApiService lolApiService = new LoLApiService();
-            LoLApiSearch lolApiSearch = new LoLApiSearch();
-            Console.WriteLine(lolApiService.lolApiDTO.loLApiModel.entries[1].summonerName);
-            Console.WriteLine(lolApiSearch.HighestLeaguePoints().summonerName);
+            LeagueItem player;
+            LoLApiService lolApiSerive = new LoLApiService();
+            IList<LeagueItem> sortedList = LoLApiSearch.SortedList(lolApiSerive.lolApiDTO.loLApiModel.entries);
+            Console.WriteLine(LoLApiSearch.HighestLeaguePoints().summonerName);
+            Console.WriteLine("Insert name of player: ");
+            player = LoLApiSearch.ByName(Console.ReadLine());
+            try
+            {  
+                Console.WriteLine($"{player.summonerName} has {player.leaguePoints} points");
+            }
+            catch(NullReferenceException ex)
+            {
+                NullReferenceException noSuchName = new NullReferenceException("Non existent or Wrong Name", ex);
+                Console.WriteLine(noSuchName.Message);
+                //throw noSuchName;
+            }
+            Console.WriteLine(sortedList[299].leaguePoints + sortedList[299].summonerName);
+
+
+            
 
             Console.Read();
 
